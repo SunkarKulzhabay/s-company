@@ -6,6 +6,7 @@ import Footer from "./components/Footer"; // Импорт Footer
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
+import Partners from './components/partners'; // Путь зависит от структуры проекта
 
 
 import "bootstrap/dist/css/bootstrap.min.css";

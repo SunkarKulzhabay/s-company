@@ -1,0 +1,37 @@
+.partners-container {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .partner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    position: relative;
+  }
+  
+  .partner-logo {
+    width: 100px; /* Фиксированный размер для всех логотипов */
+    height: 100px;
+    object-fit: contain; /* Чтобы логотипы не искажались */
+    margin-bottom: 10px;
+  }
+  
+  /* Эффект "ветвей" с помощью псевдоэлементов */
+  .partner-item::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: #ccc; /* Линия как "ветвь" */
+  }
