@@ -1,15 +1,13 @@
 /* src/CSS/Footer.css */
 .footer {
-  width: 100vw;
-  max-width: 100vw; /* Гарантируем, что футер не выйдет за границы */
-  background-color: #0d253f;
-  color: white;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  padding: 20px 0;
+  width: 100%;
+  background-color: cadetblue;
 }
+
 
 
 html, body {

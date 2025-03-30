@@ -1,10 +1,14 @@
 import '../CSS/Footer.css';
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
+
+
 
 function Footer() {
   return (
-    <footer className="footer shadow-sm py-4 w-100">
+    <footer className="footer shadow">
       <Container>
         <Row className="align-items-center text-center text-md-start">
           <Col md={4} className="mb-3 mb-md-0">
@@ -14,13 +18,13 @@ function Footer() {
           
           <Col md={4} className="mb-3 mb-md-0">
             <p className="footer-text mb-1">
-              <strong>Email:</strong> info@merchmasters.com
+              <strong>Email:</strong> sunkardimon@gmail.com
             </p>
             <p className="footer-text mb-1">
-              <strong>Адрес офиса:</strong> г. Москва, ул. Примерная, д. 10, офис 5
+              <strong>Адрес офиса:</strong> <a href='https://2gis.kz/almaty/geo/9430047375060169/76.884226,43.237675'>проспекте Абая, 150, угол улицы Тургута Озала, в Бостандыкском районе Алматы.</a>
             </p>
             <p className="footer-text mb-1">
-              <strong>Телефон начальника:</strong> +7 (999) 123-45-67
+              <strong>Телефон начальника:</strong> +7 747 821 74861
             </p>
           </Col>
           

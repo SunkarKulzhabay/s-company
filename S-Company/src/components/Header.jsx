@@ -37,10 +37,10 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto gap-4">
             {[
-              { to: "/", text: "Home" },
-              { to: "/services", text: "Services" },
-              { to: "/portfolio", text: "Portfolio" },
-              { to: "/contacts", text: "Contacts" }
+              { to: "/", text: "Главная" },
+              { to: "/partners", text: "Партнеры" },
+              { to: "/About us", text: "О нас" },
+              { to: "/contacts", text: "Связаться" }
             ].map((item) => (
               <Nav.Link
                 key={item.to}
@@ -54,7 +54,7 @@ function Header() {
             ))}
           </Nav>
 
-          <Form className="d-flex align-items-center gap-3">
+          {/* <Form className="d-flex align-items-center gap-3">
             <Form.Control
               type="search"
               placeholder="Find Your Merch..."
@@ -65,7 +65,7 @@ function Header() {
             >
               Explore
             </Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
