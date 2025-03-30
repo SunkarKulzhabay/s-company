@@ -1,0 +1,33 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Секция информации о мерчандайзинге */
+  .merchandising-info {
+    text-align: center;
+    max-width: 900px;
+    background: #1a3c34; /* Темно-зеленый фон */
+    color: #fff7e6; /* Светлый текст */
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .merchandising-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .merchandising-info p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  
