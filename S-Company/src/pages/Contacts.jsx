@@ -27,7 +27,7 @@ const Contacts = () => {
       const result = await response.json();
       if (response.ok) {
         setStatus("Сообщение отправлено!");
-        setFormData({ email: "", message: "" }); // Очистка формы
+        setFormData({ email: "", message: "" });
       } else {
         setStatus("Ошибка: " + result.error);
       }
@@ -37,11 +37,13 @@ const Contacts = () => {
   };
 
   return (
-    <Container style={{ width: "700px", height: "400px" }}>
-      <Row className="w-100">
-        <Col md={10} lg={8} className="w-100">
-          {/* <h1 className="text-center mb-4">Контакты</h1> */}
-          <Form onSubmit={handleSubmit} className="p-5 border rounded shadow w-100">
+    <Container fluid className="py-4">
+      <Row className="justify-content-center">
+        <Col xs={12} sm={10} md={8} lg={6}>
+          <Form 
+            onSubmit={handleSubmit} 
+            className="p-3 p-md-5 border rounded shadow"
+          >
             <Form.Group className="mb-4" controlId="formEmail">
               <Form.Label className="fs-5">Email</Form.Label>
               <Form.Control
@@ -51,7 +53,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 placeholder="Введите ваш email"
                 required
-                className="p-3 fs-5"
+                className="p-2 p-md-3"
               />
             </Form.Group>
 
@@ -65,11 +67,20 @@ const Contacts = () => {
                 onChange={handleChange}
                 placeholder="Введите ваше сообщение"
                 required
-                className="p-3 fs-5"
+                className="p-2 p-md-3"
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit" className="w-100 p-3 fs-5" style={{backgroundColor: "#E2725B",color: "white",border: "none"  }}>
+            <Button 
+              variant="primary" 
+              type="submit" 
+              className="w-100 p-2 p-md-3 fs-5"
+              style={{ 
+                backgroundColor: "#E2725B", 
+                color: "white", 
+                border: "none" 
+              }}
+            >
               Отправить
             </Button>
 
