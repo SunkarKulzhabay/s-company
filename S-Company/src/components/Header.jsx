@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Form, Button } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import '../CSS/Header.css';
 
@@ -36,10 +36,10 @@ function Header() {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto gap-4">
-            {[
+            {[  
               { to: "/", text: "Главная" },
               { to: "/partners", text: "Партнеры" },
-              { to: "/About us", text: "О нас" },
+              { to: "/about", text: "О нас" },  // ✅ Исправлено
               { to: "/contacts", text: "Связаться" }
             ].map((item) => (
               <Nav.Link
@@ -53,19 +53,6 @@ function Header() {
               </Nav.Link>
             ))}
           </Nav>
-
-          {/* <Form className="d-flex align-items-center gap-3">
-            <Form.Control
-              type="search"
-              placeholder="Find Your Merch..."
-              className="header-search rounded-pill shadow-sm"
-            />
-            <Button
-              className="header-button rounded-pill px-4 py-2"
-            >
-              Explore
-            </Button>
-          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

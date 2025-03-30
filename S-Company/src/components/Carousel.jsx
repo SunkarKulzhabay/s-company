@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import "../CSS/MyCarousel.css"; // Импорт стилей из CSS-файла
+import "../CSS/MyCarousel.css"; // Подключение стилей
 
 function MyCarousel() {
   return (
@@ -13,22 +13,22 @@ function MyCarousel() {
     >
       {[
         {
-          src: "/slider/photo2.jpg",
+          src: "/slider/Профессиональная выкладка.jpg",
           alt: "First slide",
           title: "Профессиональная выкладка",
-          text: "Оптимизируем размещение товаров для максимальных продаж",
+          text: "Оптимизируем размещение товаров для максимальных продаж.",
         },
         {
-          src: "/slider/image.png",
+          src: "/slider/ЭффекМерчандайзинг.png",
           alt: "Second slide",
           title: "Эффективный мерчандайзинг",
-          text: "Создаем привлекательное торговое пространство",
+          text: "Создаем привлекательное торговое пространство.",
         },
         {
-          src: "/slider/stelaj.png",
+          src: "/slider/Аутсорсинг под ключ.jpg",
           alt: "Third slide",
           title: "Аутсорсинг под ключ",
-          text: "Полный контроль выкладки и запасов",
+          text: "Полный контроль выкладки и запасов.",
         },
       ].map((slide, index) => (
         <Carousel.Item key={index}>

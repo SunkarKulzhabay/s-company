@@ -1,26 +1,48 @@
+// src/pages/Partners.jsx
 import React from 'react';
-import './partners.css'; // Предполагается, что вы создадите стили
+import '../CSS/Partners.css'; // Убедитесь, что стили находятся в src/CSS/
 
-// Пример данных о партнерах (можно заменить на ваши данные)
 const partnersData = [
-  { name: 'Partner 1', logo: 'path/to/partner1-logo.png' },
-  { name: 'Partner 2', logo: 'path/to/partner2-logo.png' },
-  { name: 'Partner 3', logo: 'path/to/partner3-logo.png' },
+  {
+    name: 'Thurson',
+    logo: '/Partners/Турсон.svg',
+    description:
+      'Thurson — бренд, основанный в 2010 году, известен своими инновационными решениями в сфере напитков. Их миссия — вдохновлять людей на новые вкусовые открытия.',
+  },
+  {
+    name: 'Localute',
+    logo: '/Partners/Localute.jpg',
+    description:
+      'Localute — местная компания, начавшая с небольшого производства в 2015 году. Они специализируются на экологичных продуктах и поддержке местных фермеров.',
+  },
+  {
+    name: 'Lemonadoff',
+    logo: '/Partners/lemonadoff.png',
+    description:
+      'Lemonadoff появился в 2018 году как стартап, производящий натуральные лимонады. Сегодня это популярный бренд с акцентом на здоровье и свежесть.',
+  },
+  {
+    name: 'MacCoffee',
+    logo: '/Partners/logo MacCoffee.svg',
+    description:
+      'MacCoffee — мировой лидер в производстве растворимого кофе с 1990-х годов. Их продукция известна своим качеством и доступностью по всему миру.',
+  },
 ];
 
 const Partners = () => {
   return (
-    <div className="partners-container">
-      <h2>Наши партнеры</h2>
-      <div className="partners-list">
+    <div className="partners-fullscreen">
+      <h1 className="partners-title">Наши партнеры</h1>
+      <div className="partners-grid">
         {partnersData.map((partner, index) => (
-          <div key={index} className="partner-item">
+          <div key={index} className="partner-card">
             <img
               src={partner.logo}
               alt={`${partner.name} logo`}
               className="partner-logo"
             />
-            <p>{partner.name}</p>
+            <h3>{partner.name}</h3>
+            <p className="partner-description">{partner.description}</p>
           </div>
         ))}
       </div>

@@ -1,66 +1,31 @@
-/* src/CSS/Footer.css */
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  width: 100vw; /* Гарантированно на всю ширину экрана */
   background-color: cadetblue;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+  position: relative; /* Убираем абсолютное позиционирование */
+  left: 0;
 }
 
+.footer .container {
+  max-width: 1200px; /* Центрирование контента */
+  margin: 0 auto;
+}
 
-
-html, body {
+/* Глобальные стили для правильного отображения футера */
+html, body, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Убираем горизонтальный скролл */
 }
 
-
-.footer-title {
-  color: #F6C107; /* Желтый заголовок */
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Растягиваем страницу на всю высоту экрана */
 }
 
-.footer:hover .footer-title {
-  transform: translateY(-3px); /* Легкий подъем при наведении */
-}
-
-.footer-text {
-  color: #EBF4FF;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
-
-.footer-text strong {
-  color: #FF6B6B; /* Красный акцент для выделения */
-  font-weight: 600;
-}
-
-.footer-text:hover {
-  color: #F6C107; /* Желтый при наведении */
-}
-
-.container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-
-/* Адаптивность */
-@media (max-width: 767px) {
-  .footer-text {
-    font-size: 1rem;
-  }
-
-  .footer-title {
-    font-size: 1.3rem;
-  }
+.content {
+  flex: 1; /* Контент занимает все доступное пространство */
 }

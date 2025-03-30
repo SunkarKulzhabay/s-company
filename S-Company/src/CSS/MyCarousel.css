@@ -1,116 +1,116 @@
-/* src/CSS/MyCarousel.css */
+/* Главный контейнер слайдера */
 .carousel {
-    height: 50vh; /* Половина высоты экрана */
-    margin-top: 80px; /* Учитываем высоту Header */
-    overflow: hidden;
-    position: relative;
+  height: 85vh; /* Немного увеличенная высота */
+  margin-top: 80px; /* Учитываем высоту Header */
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px; /* Закругленные края */
+}
+
+/* Контейнер для изображения */
+.carousel-image-wrapper {
+  height: 80vh; /* Высота контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  overflow: hidden;
+  background-color: #fff; /* Фон, если картинка не заполняет область */
+}
+
+/* Картинка */
+.carousel-image {
+  /* height: 100%; */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-fit: contain;
+  filter: brightness(65%) contrast(1.15); /* Затемнение + легкий контраст */
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05); /* Увеличение при наведении */
+  filter: brightness(75%) contrast(1.2);
+}
+
+/* Градиентный эффект */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Чтобы overlay не мешал взаимодействию */
+}
+
+/* Контейнер текста */
+.carousel-caption {
+  bottom: 3rem;
+  text-align: left;
+  max-width: 750px;
+  left: 10%;
+  transform: translateY(0);
+  animation: slideUp 0.8s ease-out;
+  padding: 1.5rem;
+  background: rgba(26, 60, 52, 0.3); /* Легкий фон для читаемости */
+  border-radius: 12px;
+}
+
+/* Заголовок */
+.carousel-title {
+  color: #f2f1ef; /* Теплый белый */
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.carousel-caption:hover .carousel-title {
+  transform: translateY(-5px); /* Легкий подъем при наведении */
+}
+
+/* Описание */
+.carousel-text {
+  color: #f2f1ef; /* Желтый акцент */
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+}
+
+/* Анимация появления */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
   }
-  
-  .carousel-image-wrapper {
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .carousel-image {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(60%) contrast(1.1); /* Затемнение и легкий контраст */
-    transition: transform 0.6s ease, filter 0.3s ease;
-  }
-  
-  .carousel-image:hover {
-    transform: scale(1.05); /* Легкий зум при наведении */
-    filter: brightness(70%) contrast(1.2);
-  }
-  
-  .carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to top,
-      rgba(26, 60, 52, 0.6),
-      rgba(246, 193, 7, 0.1) 80%,
-      transparent
-    ); /* Градиент с акцентами мерчандайзинга */
-    pointer-events: none; /* Чтобы overlay не мешал взаимодействию */
-  }
-  
-  .carousel-caption {
-    bottom: 3rem;
-    text-align: left;
-    max-width: 700px;
-    left: 10%;
+  to {
+    opacity: 1;
     transform: translateY(0);
-    animation: slideUp 0.8s ease-out;
-    padding: 1rem;
-    background: rgba(26, 60, 52, 0.2); /* Легкий фон для читаемости */
-    border-radius: 10px;
   }
-  
-  .carousel-title {
-    color: #fff7e6; /* Теплый белый для контраста */
-    font-size: 2.8rem;
-    font-weight: 800;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-    margin-bottom: 1.5rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: transform 0.3s ease;
-  }
-  
-  .carousel-caption:hover .carousel-title {
-    transform: translateY(-5px); /* Легкий подъем при наведении */
-  }
-  
-  .carousel-text {
-    color: #f6c107; /* Желтый акцент для текста */
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    line-height: 1.6;
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(26, 60, 52, 0.8); /* Темно-зеленый фон */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    transition: all 0.3s ease;
-  }
-  
-  .carousel-control-prev-icon:hover,
-  .carousel-control-next-icon:hover {
-    background-color: #f6c107; /* Желтый при наведении */
-    transform: scale(1.1);
-  }
-  
-  .carousel-indicators [data-bs-target] {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #ff6b6b; /* Красный индикатор */
-    border: none;
-    margin: 0 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .carousel-indicators .active {
-    background-color: #1a3c34; /* Темно-зеленый для активного */
-    transform: scale(1.3);
-  }
+}
+
+/* Стрелки управления */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(237, 240, 239, 0.8); /* Темно-зеленый фон */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+/* Индикаторы (точки) */
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #101010; /* Красный индикатор */
+  border: none;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+

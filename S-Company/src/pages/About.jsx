@@ -1,3 +1,4 @@
+// src/pages/About.jsx
 import React, { useState } from "react";
 import { Tab, Tabs, Container } from "react-bootstrap";
 
@@ -8,23 +9,23 @@ const About = () => {
     <div
       style={{
         paddingTop: "20px",
-        backgroundImage: `url('/logo.png')`,
-        backgroundSize: "20%", // Уменьшаем логотип еще больше для элегантности
+        backgroundImage: `url('/logo.png')`, // Убедитесь, что logo.png есть в public/
+        backgroundSize: "20%",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         minHeight: "100vh",
-        backgroundColor: "#f8f9fa", // Светлый фон для контраста
-        padding: "40px 20px", // Увеличенные отступы
+        backgroundColor: "#f8f9fa",
+        padding: "40px 20px",
       }}
     >
       <Container
         className="mt-4"
         style={{
-          maxWidth: "900px", // Ограничиваем ширину для читаемости
-          backgroundColor: "#ffffff", // Белый фон для контента
-          borderRadius: "15px", // Скругленные углы
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)", // Тень для глубины
+          maxWidth: "900px",
+          backgroundColor: "#ffffff",
+          borderRadius: "15px",
+          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
           padding: "20px",
         }}
       >
@@ -35,21 +36,17 @@ const About = () => {
           className="mb-3"
           fill
           style={{
-            borderBottom: "2px solid #007bff", // Синяя линия под вкладками
+            borderBottom: "2px solid #007bff",
           }}
         >
-          <Tab
-            eventKey="history"
-            title="История"
-            style={{ padding: "20px" }}
-          >
+          <Tab eventKey="history" title="История" style={{ padding: "20px" }}>
             <div
               style={{
                 padding: "20px",
                 lineHeight: "1.8",
                 color: "#333",
                 fontSize: "1.1rem",
-                fontFamily: "'Roboto', sans-serif", // Современный шрифт
+                fontFamily: "'Roboto', sans-serif",
               }}
             >
               <p>
@@ -74,11 +71,7 @@ const About = () => {
             </div>
           </Tab>
 
-          <Tab
-            eventKey="mission"
-            title="Миссия"
-            style={{ padding: "20px" }}
-          >
+          <Tab eventKey="mission" title="Миссия" style={{ padding: "20px" }}>
             <div
               style={{
                 padding: "20px",
@@ -105,11 +98,7 @@ const About = () => {
             </div>
           </Tab>
 
-          <Tab
-            eventKey="team"
-            title="Наша команда"
-            style={{ padding: "20px" }}
-          >
+          <Tab eventKey="team" title="Наша команда" style={{ padding: "20px" }}>
             <div
               style={{
                 padding: "20px",
