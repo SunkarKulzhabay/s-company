@@ -39,8 +39,8 @@ function Header() {
             {[  
               { to: "/", text: "Главная" },
               { to: "/partners", text: "Партнеры" },
-              { to: "/about", text: "О нас" },  // ✅ Исправлено
-              { to: "/contacts", text: "Связаться" }
+              { to: "/about", text: "О нас" }  // ✅ Исправлено
+              // { to: "/contacts", text: "Связаться" }
             ].map((item) => (
               <Nav.Link
                 key={item.to}

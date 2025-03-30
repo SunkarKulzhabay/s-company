@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contacts from "./pages/Contacts";
+// import Contacts from "./pages/Contacts";
 import Partners from './pages/Partners'; // Оставляем в components, если не переносим
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contacts" element={<Contacts />} />
+            {/* <Route path="/contacts" element={<Contacts />} /> */}
             <Route path="/partners" element={<Partners />} />
           </Routes>
         </div>
