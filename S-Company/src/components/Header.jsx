@@ -25,7 +25,7 @@ function Header() {
             className="header-logo rounded-circle shadow"
           />
           <span className="header-title fs-3 fw-bold ms-3">
-            MerchMasters
+            S-Company
           </span>
         </Navbar.Brand>
 

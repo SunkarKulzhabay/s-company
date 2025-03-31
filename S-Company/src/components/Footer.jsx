@@ -15,7 +15,7 @@ function Footer() {
 
           <Col md={4} className="mb-3 mb-md-0">
             <p className="footer-text mb-1">
-              <strong>Email:</strong> sunkardimon@gmail.com
+              <strong>Email:</strong> alimsautov75@gmail.com
             </p>
             <p className="footer-text mb-1">
               <strong>Адрес офиса:</strong>{' '}
@@ -24,13 +24,13 @@ function Footer() {
               </a>
             </p>
             <p className="footer-text mb-1">
-              <strong>Телефон начальника:</strong> +7 747 821 74861
+              <strong>Телефон начальника:</strong> +7 701 032 9001
             </p>
           </Col>
 
           <Col md={4} className="text-md-end">
             <p className="footer-text mb-0">
-              © {new Date().getFullYear()} MerchMasters. Все права защищены.
+              © {new Date().getFullYear()} S-Company. Все права защищены.
             </p>
           </Col>
         </Row>

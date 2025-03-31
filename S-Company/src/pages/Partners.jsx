@@ -1,6 +1,7 @@
 // src/pages/Partners.jsx
 import React from 'react';
-import '../CSS/Partners.css'; // Убедитесь, что стили находятся в src/CSS/
+import "../CSS/Partners.css"; // Или абсолютный путь
+ // Убедитесь, что стили находятся в src/CSS/
 
 const partnersData = [
   {
